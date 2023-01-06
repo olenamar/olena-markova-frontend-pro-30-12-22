@@ -1,11 +1,13 @@
 const array = [1, 2, 3, 4, 5, 6, 7];
 
 function arrayItem(array, item) {
-    item = array.indexOf(5);
-    if(item > -1) {
-        array.splice(item, 1);
+    const index = array.indexOf(item);
+    if(index > -1) {
+        array.splice(index, 1);
     }
-    return array;    
+    return array;        
 }
 
-console.log(arrayItem(array));
+arrayItem(array, 5);
+
+console.log(array);
